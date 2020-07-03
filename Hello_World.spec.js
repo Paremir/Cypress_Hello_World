@@ -3,7 +3,7 @@ context('Hello World', () => {
   it('Go to the site',() =>{
     cy.visit('https://pastebin.com/')
   })
-  it('We write "Hello World" and create link', () =>{
+  it('We write "Hello World" and create paste', () =>{
     cy.log('write "Hello World" in text box')
     cy.get('.paste_textarea')
       .type('Hello World')
