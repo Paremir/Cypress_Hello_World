@@ -1,21 +1,28 @@
-context('Hello World', () => {
+ context('Hello World', () => {
+  var url = 'https://pastebin.com/',
+  text = 'Hello World',
+  link;
+  it('Go to site',() =>{
+    cy.visit(url)
+  })
+
+  it('Write "Hello World" and create paste', () =>{
+    cy.log('Write "Hello World" in text box')
+    cy.get('#paste_code')
+      .type(text)
+    cy.log('Create paste')  
+    cy.get('#submit').click()
+    cy.log('Save link')
+    cy.url().then(url => {  link = url; })
+  })
   
-  it('Go to the site',() =>{
-    cy.visit('https://pastebin.com/')
-  })
-  it('We write "Hello World" and create paste', () =>{
-    cy.log('write "Hello World" in text box')
-    cy.get('.paste_textarea')
-      .type('Hello World')
-    cy.log('Create link')
-    cy.get('.btnbig').click()
-  })
   it('Check new paste', () =>{
-    cy.log('Check link')
-    cy.url()
-      .should('include','https://pastebin.com')
-    cy.log('Check "Hello World" in RAW Paste Data')
-    cy.get('.paste_code')
-      .should('have.value','Hello World')
-  })
+     cy.log('Check link')
+     cy.then(() => cy.visit(link))
+     cy.url()
+       .should('include',url)
+     cy.log('Check "Hello World" in RAW Paste Data')
+     cy.get('.paste_code')
+       .should('have.value',text)
+   })
   })
