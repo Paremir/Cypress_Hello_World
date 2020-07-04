@@ -1,7 +1,9 @@
  context('Hello World', () => {
+  
   var url = 'https://pastebin.com/',
   text = 'Hello World',
-  link;
+  link
+  
   it('Go to site',() =>{
     cy.visit(url)
   })
@@ -13,7 +15,7 @@
     cy.log('Create paste')  
     cy.get('#submit').click()
     cy.log('Save link')
-    cy.url().then(url => {  link = url; })
+    cy.url().then(url => {  link = url })
   })
   
   it('Check new paste', () =>{
