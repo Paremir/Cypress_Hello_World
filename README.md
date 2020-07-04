@@ -2,7 +2,7 @@
 
 "What is it?" - This is a test case that work using "Cypress"
 
-"What to do?" - It open https://pastebin.com, create paste 'Hello World' and check the new paste
+"What to do?" - Open https://pastebin.com, create paste 'Hello World' and check the new paste
 
 "What do need to work?" - Cypress ( installation instruction - https://docs.cypress.io/guides/getting-started/installing-cypress.html#Direct-download)
 
