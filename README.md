@@ -4,11 +4,11 @@
 
 "What to do?" - It open https://pastebin.com, create paste 'Hello World' and check the new paste
 
-"What do need to work?" - Cypress ( installation instructions - https://docs.cypress.io/guides/getting-started/installing-cypress.html#Direct-download)
+"What do need to work?" - Cypress ( installation instruction - https://docs.cypress.io/guides/getting-started/installing-cypress.html#Direct-download)
 
 "How to use the test case?":":
 - Install file "Hello_World.spec.js" in folder ...\cypress\integration\examples
 - Launch Cypress from the console in the Cypress directory
 - In Cypress choose section "INTEGRATION TESTS" and in folder "examples" find file "Hello_World.spec.js"
 - Click on "Hello_World.spec.js"
-- Congratulations!!!
+- Congratulation !!!
